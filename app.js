@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
 
 //resolvendo CORS
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }))
+app.use(cors());
 
 //conexão com o banco de dados
 require("./config/db.js");
