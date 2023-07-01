@@ -18,7 +18,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon ./app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "echo \"Build script executed\""
   },
   "keywords": [],
   "author": "",
