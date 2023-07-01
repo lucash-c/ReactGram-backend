@@ -18,10 +18,10 @@ app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
 app.use(cors());
 
 //conexão com o banco de dados
-require("./config/db.js");
+require("../config/db.js");
 
 // rotas
-const router = require("./routes/Router.js")
+const router = require("../routes/Router.js")
 app.use(router);
 
 app.listen(process.env.PORT || 3000);

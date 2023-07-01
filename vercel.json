@@ -1,12 +1,14 @@
 {
+    "name": "backend-reactgram",
     "version": 2,
+    "public": true,
     "builds": [
       {
-        "src": "app.js",
+        "src": "api/app.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-      { "handle": "vercel", "src": "/.*" }
+      {"src": "/(.*)", "dest": "api/app.js"}
     ]
   }
