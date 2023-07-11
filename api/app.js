@@ -11,9 +11,6 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// definindo diretorio de upload de imagens
-app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
-
 //resolvendo CORS
 app.use(cors());
 
