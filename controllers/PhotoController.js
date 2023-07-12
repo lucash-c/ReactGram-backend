@@ -1,5 +1,6 @@
 const Photo = require("../models/Photo");
 const User = require("../models/User")
+const path = require('path');
 
 const mongoose = require("mongoose");
 
@@ -7,7 +8,8 @@ const mongoose = require("mongoose");
 const insertPhoto = async (req, res) => {
 
     const { title } = req.body
-    const image = req.file.filename
+    const image = path.basename(req.file.key);
+    console.log(image)
 
     const reqUser = req.user
 
@@ -28,7 +30,7 @@ const insertPhoto = async (req, res) => {
         });
         return;
     }
-
+    
     res.status(201).json(newPhoto)
 };
 

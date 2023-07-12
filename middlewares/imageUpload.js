@@ -17,7 +17,7 @@ const imageStorage = multerS3({
   });
 
 
-//validar imagem e definir onde a imagem vai ser salva
+//validar imagem 
 const imageUpload = multer({
     storage: imageStorage,
     fileFilter(req, file, cb) {
